@@ -1,0 +1,100 @@
+[
+  {
+    "intencion": "matricula_requisitos",
+    "respuesta": "Para registrar tus cursos, revisa las condiciones de matrícula de tu periodo en MiMundoUPN. La información publicada por UPN indica que debes haber pagado la prematrícula; el registro depende de las vacantes disponibles en tu campus y carrera. Para inscribirte en un curso debes tener aprobado su prerrequisito y no presentar cruces de horario. Ingresa a MiMundoUPN, Servicios, Matrícula en línea. Esta es una orientación inicial: confirma los requisitos completos aplicables a tu situación en la fuente oficial o mediante Contacto UPN.",
+    "fuente": "https://contacto.upn.edu.pe/proceso-de-matriculas",
+    "area_responsable": "Contacto UPN - consultas sobre matrícula",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "matricula_fechas",
+    "respuesta": "Para conocer las fechas aplicables a tu matrícula, revisa el calendario académico del periodo y los avisos de MiMundoUPN. Confirma tu programa y periodo antes de elegir el calendario. Si no identificas la fecha que te corresponde, consulta por Contacto UPN. Esta base no fija una fecha de matrícula para todos los estudiantes.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/proceso-de-matriculas/desde-cuando-y-hasta-que-fecha-me-puedo-matricular",
+    "area_responsable": "Contacto UPN - consultas sobre matrícula",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "horarios_consulta",
+    "respuesta": "Ingresa a MiMundoUPN con tu cuenta institucional. En la pantalla principal, abre la opción Cursos para consultar tu horario de clases. El agente te orienta hacia esa sección, pero no tiene acceso a tu horario personal.",
+    "fuente": "https://contacto.upn.edu.pe/como-puedo-revisar-los-horarios-de-mis-cursos",
+    "area_responsable": "Contacto UPN - consultas académicas",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "becas_requisitos",
+    "respuesta": "Primero identifica la beca o beneficio que deseas solicitar. Consulta la sección oficial de Becas, descuentos y financiamientos y revisa los requisitos del Reglamento de Becas y de la convocatoria correspondiente. Los requisitos dependen del beneficio solicitado; esta respuesta no confirma que cumplas las condiciones ni que exista una convocatoria abierta. Para orientación sobre tu caso, utiliza Contacto UPN.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/becas-descuentos-y-financiamientos",
+    "area_responsable": "Contacto UPN - consultas sobre becas y beneficios",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "pagos_consulta",
+    "respuesta": "Accede a MiMundoUPN y abre Pagos. Revisa la sección Obligaciones por pagar para identificar los conceptos pendientes y las opciones disponibles. Si encuentras un inconveniente, utiliza la opción de ayuda y Contacto UPN. El agente no consulta tu estado de cuenta ni realiza pagos.",
+    "fuente": "https://contacto.upn.edu.pe/mimundoupn",
+    "area_responsable": "Contacto UPN - consultas sobre pagos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "constancia_solicitud",
+    "respuesta": "Para solicitar específicamente la Constancia de Estudios de Pregrado, ingresa a MiMundoUPN, abre Solicitudes y luego Listado de trámites. Selecciona Constancia de Estudios de Pregrado, revisa la vista previa y confirma que sea el documento que necesitas. Continúa con el pago por los canales habilitados. Después podrás revisar Solicitudes, Estado de trámites y descargarla cuando esté disponible. Confirma el importe y el plazo vigentes en la fuente. Si necesitas otra constancia, precisa cuál, porque el procedimiento puede ser diferente.",
+    "fuente": "https://contacto.upn.edu.pe/constancias-virtuales",
+    "area_responsable": "Contacto UPN - trámites académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "acceso_recuperacion",
+    "respuesta": "En la pantalla de acceso de MiMundoUPN, selecciona la opción para recuperar el acceso a tu cuenta. Introduce tu correo institucional y sigue la verificación mediante el correo o celular registrado; después establece la nueva contraseña siguiendo las indicaciones del portal. Si no puedes completar la verificación, solicita apoyo mediante Contacto UPN. Introduce tu contraseña y tus códigos de verificación únicamente en el servicio institucional, nunca en este chat.",
+    "fuente": "https://contacto.upn.edu.pe/mimundoupn",
+    "area_responsable": "Contacto UPN - soporte de aplicaciones y accesos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "retiro_curso",
+    "respuesta": "Antes de solicitar el retiro de un curso, verifica la fecha límite de tu calendario académico y los requisitos publicados por UPN. Ingresa a MiMundoUPN, Solicitudes, Otras solicitudes y Nueva solicitud; selecciona la categoría y el servicio Retiro de curso. Revisa las condiciones y el derecho de trámite vigente antes de continuar. UPN indica que este retiro no reduce las cuotas de pensión y no procede si el curso ya finalizó. Si eres menor de edad, revisa también la autorización del apoderado. El agente brinda orientación y no ejecuta ni aprueba el retiro.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/retiros",
+    "area_responsable": "Contacto UPN - trámites académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "carne_solicitud",
+    "respuesta": "El carné universitario se solicita durante una convocatoria habilitada por UPN. Revisa primero si hay una convocatoria vigente y valida que tu fotografía cumpla los requisitos publicados. En MiMundoUPN ingresa a Solicitudes, Otras solicitudes y Nueva solicitud; selecciona el trámite de carné universitario correspondiente, completa los datos, adjunta la fotografía y sigue las indicaciones de pago. Consulta en la fuente oficial las fechas, condiciones y costo. Esta respuesta no confirma que la convocatoria esté abierta.",
+    "fuente": "https://contacto.upn.edu.pe/como-solicito-mi-carne-universitario",
+    "area_responsable": "Contacto UPN - carné universitario",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "certificado_estudios",
+    "respuesta": "Para solicitar un certificado de estudios de pregrado, ingresa a MiMundoUPN, Solicitudes, Documentos Virtuales y Solicitudes. Busca el certificado que corresponda: de un periodo, de dos o más periodos o de egreso. Revisa las características, selecciona tu carrera, registra la solicitud y sigue las instrucciones de pago. Verifica el costo y plazo para ese documento. Cuando esté emitido, podrás descargarlo en Documentos Virtuales, sección Documentos. Si el documento no aparece, consulta a Contacto UPN.",
+    "fuente": "https://contacto.upn.edu.pe/constancias-virtuales",
+    "area_responsable": "Contacto UPN - trámites académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "retiro_ciclo",
+    "respuesta": "Para solicitar el retiro del ciclo, revisa primero el calendario y las condiciones de tu programa. Ingresa a MiMundoUPN, Solicitudes, Otras solicitudes y Nueva solicitud. Selecciona la categoría Retiro y el servicio Retiro de ciclo; completa el motivo y la información solicitada. Revisa los requisitos, autorizaciones y pago aplicables, incluidas las autorizaciones de apoderado o PRONABEC cuando correspondan. Los efectos económicos dependen de la modalidad y fecha del trámite: confirma tu caso antes de continuar. Dejar de asistir a clases no formaliza el retiro. El agente no ejecuta ni aprueba esta solicitud.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/retiros/como-me-puedo-retirar-del-ciclo",
+    "area_responsable": "Contacto UPN - trámites académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "traslado_carrera",
+    "respuesta": "Para cambiar de carrera, consulta el calendario y las condiciones del traslado que correspondan a tu programa. Ingresa a MiMundoUPN, Solicitudes, Otras solicitudes y Nueva solicitud. Busca el servicio de traslado de carrera aplicable a tu modalidad, completa los datos y sigue las instrucciones del portal. Confirma requisitos, vacantes, reconocimiento de cursos, pensiones y derecho de trámite antes de solicitarlo. Algunas carreras, como Medicina, tienen un procedimiento específico. Presentar la solicitud no garantiza su aprobación; revisa la respuesta en tu correo institucional.",
+    "fuente": "https://contacto.upn.edu.pe/traslados",
+    "area_responsable": "Contacto UPN - traslados académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "traslado_campus",
+    "respuesta": "Para cambiar de campus, consulta las fechas y condiciones publicadas para tu modalidad. Ingresa a MiMundoUPN, Solicitudes, Otras solicitudes y Nueva solicitud; elige el trámite de traslado de campus correspondiente e indica el destino. La universidad evaluará los requisitos y la disponibilidad de carrera, ciclo y vacantes. Revisa el derecho de trámite y las pensiones del campus de destino antes de continuar. El cambio puede afectar beneficios económicos. La presentación de la solicitud no garantiza su aprobación; revisa las indicaciones y la respuesta enviadas a tu correo institucional.",
+    "fuente": "https://contacto.upn.edu.pe/como-solicito-mi-traslado-de-campus",
+    "area_responsable": "Contacto UPN - traslados académicos",
+    "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "contacto_atencion",
+    "respuesta": "Ingresa a MiMundoUPN y abre Servicios o Mis Servicios, Contacto UPN. Revisa las preguntas frecuentes y, si no resuelven tu consulta, registra un ticket seleccionando el tema y subtema correspondientes. Para revisar su avance, utiliza la opción de seguimiento de tickets. También puedes comunicarte con el WhatsApp del Estudiante, 914 800 800, o consultar los teléfonos y horarios de tu campus en la página oficial. El agente te orienta, pero no registra ni envía el ticket por ti.",
+    "fuente": "https://contacto.upn.edu.pe/canales-de-atencion-upn",
+    "area_responsable": "Contacto UPN - atención al estudiante",
+    "fecha_revision": "2026-10-23"
+  }
+]
