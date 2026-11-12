@@ -13,6 +13,31 @@ from retroalimentacion import confirmadas_csv, listar_registros, revisar_registr
 
 st.set_page_config(page_title="Revisar consultas", layout="centered")
 st.title("Revisar consultas")
+
+try:
+    clave_admin = st.secrets["admin"]["password"]
+except Exception:
+    clave_admin = None
+
+if clave_admin:
+    if not st.session_state.get("revision_autorizada"):
+        clave_ingresada = st.text_input("Contraseña de administrador", type="password")
+        if st.button("Ingresar", width="stretch"):
+            if clave_ingresada == clave_admin:
+                st.session_state["revision_autorizada"] = True
+                st.rerun()
+            else:
+                st.error("Contraseña incorrecta.")
+        st.stop()
+else:
+    try:
+        publicada = "gsheets" in st.secrets.get("connections", {})
+    except Exception:
+        publicada = False
+    if publicada:
+        st.error("Configura [admin] password en los Secrets de Streamlit.")
+        st.stop()
+
 st.write("Confirma, corrige o descarta cada ejemplo antes de usarlo para entrenar.")
 
 pendientes = list(reversed(listar_registros("pendiente")))
