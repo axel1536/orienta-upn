@@ -54,11 +54,20 @@ def _leer():
     registros = datos[COLUMNAS].fillna("").to_dict("records")
     for registro in registros:
         if registro["confianza"] == "":
-            registro["confianza"] = None
+            registro["confianza"] = (
+                "No aplica (regla)" if registro.get("origen") == "regla"
+                else "No disponible"
+            )
         if registro["intencion_confirmada"] == "":
-            registro["intencion_confirmada"] = None
+            registro["intencion_confirmada"] = (
+                "Pendiente" if registro.get("estado") == "pendiente"
+                else "Descartada" if registro.get("estado") == "descartada"
+                else None
+            )
         if registro["fecha_revision"] == "":
-            registro["fecha_revision"] = None
+            registro["fecha_revision"] = (
+                "Pendiente" if registro.get("estado") == "pendiente" else None
+            )
     return registros
 
 
@@ -81,17 +90,22 @@ def _escribir(registros):
 
 def guardar_pendiente(consulta, respuesta, intencion_predicha,
                       confianza=None, origen="dialogo"):
+    confianza_mostrada = (
+        round(float(confianza), 4) if confianza is not None
+        else "No aplica (regla)" if origen == "regla"
+        else "No disponible"
+    )
     registro = {
         "id": uuid4().hex,
         "fecha": datetime.now().astimezone().isoformat(timespec="seconds"),
         "consulta": consulta.strip(),
         "respuesta": respuesta.strip(),
         "intencion_predicha": intencion_predicha,
-        "confianza": None if confianza is None else round(float(confianza), 4),
+        "confianza": confianza_mostrada,
         "origen": origen,
         "estado": "pendiente",
-        "intencion_confirmada": None,
-        "fecha_revision": None,
+        "intencion_confirmada": "Pendiente",
+        "fecha_revision": "Pendiente",
     }
     with _BLOQUEO:
         registros = _leer()
@@ -118,7 +132,7 @@ def revisar_registro(identificador, estado, intencion_confirmada=None):
             if registro.get("id") == identificador:
                 registro["estado"] = estado
                 registro["intencion_confirmada"] = (
-                    intencion_confirmada if estado == "confirmada" else None
+                    intencion_confirmada if estado == "confirmada" else "Descartada"
                 )
                 registro["fecha_revision"] = datetime.now().astimezone().isoformat(timespec="seconds")
                 encontrado = registro
