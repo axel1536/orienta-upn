@@ -57,11 +57,14 @@ if sesion["historial"]:
         id_respuesta = f"{st.session_state[CLAVE_CONVERSACION]}_{len(sesion['historial'])}"
         clave_guardada = "consulta_guardada_" + id_respuesta
         if not st.session_state.get(clave_guardada):
-            guardar_pendiente(
-                consulta, ultimo["respuesta"], intencion,
-                ultimo.get("confianza"), ultimo.get("origen", "dialogo")
-            )
-            st.session_state[clave_guardada] = True
+            try:
+                guardar_pendiente(
+                    consulta, ultimo["respuesta"], intencion,
+                    ultimo.get("confianza"), ultimo.get("origen", "dialogo")
+                )
+                st.session_state[clave_guardada] = True
+            except Exception:
+                st.warning("La respuesta funcionó, pero no se pudo guardar para revisión.")
 
 opciones = sesion["historial"][-1]["resultado"].get("opciones", []) if sesion["historial"] else []
 if opciones:

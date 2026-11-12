@@ -6,12 +6,33 @@ from pathlib import Path
 from threading import Lock
 from uuid import uuid4
 
+import pandas as pd
+
 
 ARCHIVO = Path(__file__).resolve().parent / "datos" / "consultas_por_revisar.json"
+HOJA = "consultas"
+COLUMNAS = [
+    "id", "fecha", "consulta", "respuesta", "intencion_predicha",
+    "confianza", "origen", "estado", "intencion_confirmada",
+    "fecha_revision",
+]
 _BLOQUEO = Lock()
 
 
-def _leer():
+def _conexion_remota():
+    try:
+        import streamlit as st
+        conexiones = st.secrets.get("connections", {})
+        if "gsheets" not in conexiones:
+            return None
+    except Exception:
+        return None
+
+    from streamlit_gsheets import GSheetsConnection
+    return st.connection("gsheets", type=GSheetsConnection)
+
+
+def _leer_local():
     if not ARCHIVO.exists():
         return []
     with ARCHIVO.open(encoding="utf-8") as archivo:
@@ -19,12 +40,43 @@ def _leer():
     return contenido if isinstance(contenido, list) else []
 
 
-def _escribir(registros):
+def _leer():
+    conexion = _conexion_remota()
+    if conexion is None:
+        return _leer_local()
+
+    datos = conexion.read(worksheet=HOJA, ttl=0)
+    if datos is None or datos.empty:
+        return []
+    for columna in COLUMNAS:
+        if columna not in datos.columns:
+            datos[columna] = ""
+    registros = datos[COLUMNAS].fillna("").to_dict("records")
+    for registro in registros:
+        if registro["confianza"] == "":
+            registro["confianza"] = None
+        if registro["intencion_confirmada"] == "":
+            registro["intencion_confirmada"] = None
+        if registro["fecha_revision"] == "":
+            registro["fecha_revision"] = None
+    return registros
+
+
+def _escribir_local(registros):
     ARCHIVO.parent.mkdir(parents=True, exist_ok=True)
     temporal = ARCHIVO.with_suffix(".tmp")
     with temporal.open("w", encoding="utf-8") as archivo:
         json.dump(registros, archivo, ensure_ascii=False, indent=2)
     temporal.replace(ARCHIVO)
+
+
+def _escribir(registros):
+    conexion = _conexion_remota()
+    if conexion is None:
+        _escribir_local(registros)
+        return
+    datos = pd.DataFrame(registros, columns=COLUMNAS).fillna("")
+    conexion.update(worksheet=HOJA, data=datos)
 
 
 def guardar_pendiente(consulta, respuesta, intencion_predicha,
