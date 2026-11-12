@@ -17,7 +17,7 @@ CATEGORIAS = {
 BREVES = {
     "matricula_requisitos": "Claro. Para matricularte, entra a MiMundoUPN → Servicios → Matrícula en línea. Antes revisa que la prematrícula esté pagada y que no tengas problemas con prerrequisitos, vacantes o cruces de horario.",
     "matricula_fechas": "Claro. Revisa el calendario de tu programa y periodo, además de los avisos de MiMundoUPN. Si no aparece tu fecha, puedes consultarla mediante Contacto UPN.",
-    "horarios_consulta": "Parece que tienes un cruce de horarios. Entra a MiMundoUPN → Cursos, revisa las horas de ambos cursos y verifica si hay otra sección disponible. Si no puedes resolverlo, registra la consulta en Contacto UPN.",
+    "horarios_consulta": "Entiendo, parece que tienes un cruce de horarios. Entra a MiMundoUPN → Cursos, revisa ambos cursos y verifica si existe otra sección disponible. ¿Quieres que te indique qué hacer si no encuentras otra sección?",
     "becas_requisitos": "Claro. Primero elige la beca o beneficio que te interesa. Luego revisa sus requisitos y la convocatoria vigente en la sección de Becas de UPN, porque las condiciones cambian según el beneficio.",
     "pagos_consulta": "Entiendo. Entra a MiMundoUPN → Pagos → Obligaciones por pagar y abre el detalle del cobro. Si no lo reconoces, no lo pagues todavía: registra una consulta en Contacto UPN con el concepto y el monto.",
     "constancia_solicitud": "Claro. En MiMundoUPN entra a Solicitudes → Listado de trámites, elige Constancia de Estudios, revisa tus datos y sigue las indicaciones de pago. Después podrás revisar su estado en Solicitudes.",
@@ -72,14 +72,35 @@ def elegir_tema(claves):
 
 def informar(intencion, metodo="Reglas del diálogo", motivo=None):
     registro = CONOCIMIENTO[intencion]
+    opciones = [opcion("Hacer otra consulta", "menu")]
+    if intencion == "horarios_consulta":
+        opciones = [opcion("Sí, indícame", "detalle:horarios"),
+                    opcion("Hacer otra consulta", "menu")]
     return ({"respuesta": BREVES[intencion], "tema": TEMAS[intencion],
              "intencion": intencion,
              "origen": "modelo" if metodo.startswith("Modelo entrenado") else "regla",
              "fuente": registro["fuente"], "detalle": registro["respuesta"],
              "area_responsable": registro["area_responsable"],
              "fecha_revision": registro.get("fecha_revision", ""),
-             "opciones": [opcion("Hacer otra consulta", "menu")],
+             "opciones": opciones,
              "explicacion": {"metodo": metodo, "motivo": motivo or "El tema o la opción elegida corresponde a una única intención; se recupera su guía de la base de conocimiento.", "intencion": intencion}},
+            {"fase": "respondido", "intencion": intencion})
+
+
+def ampliar_horarios():
+    intencion = "horarios_consulta"
+    registro = CONOCIMIENTO[intencion]
+    respuesta = (
+        "Si no encuentras otra sección disponible, puedes hacer esto:\n\n"
+        "1. Guarda una captura donde se vea el cruce de horarios.\n"
+        "2. Entra a MiMundoUPN → Servicios → Contacto UPN.\n"
+        "3. Explica qué cursos y secciones se cruzan para que revisen tu caso.\n\n"
+        "UPN deberá confirmar si existe alguna alternativa disponible."
+    )
+    return ({"respuesta": respuesta, "tema": TEMAS[intencion],
+             "intencion": intencion, "origen": "regla",
+             "fuente": registro["fuente"],
+             "opciones": [opcion("Hacer otra consulta", "menu")]},
             {"fase": "respondido", "intencion": intencion})
 
 
@@ -99,6 +120,8 @@ def _avanzar(texto="", contexto=None, accion=None):
 
     if accion == "menu" or normal in {"menu", "inicio", "otra consulta", "otro tema", "cancelar"}:
         return elegir_categoria()
+    if accion == "detalle:horarios":
+        return ampliar_horarios()
     if accion and accion.startswith("categoria:"):
         categoria = accion.split(":", 1)[1]
         if categoria in CATEGORIAS:
@@ -118,6 +141,11 @@ def _avanzar(texto="", contexto=None, accion=None):
             return elegir_categoria(mensaje="De acuerdo. ¿Qué tema necesitas?")
     elif normal in {"si", "no", "correcto", "confirmo"}:
         return elegir_categoria(mensaje="Primero elige el tema de tu consulta.")
+
+    if (fase == "respondido" and contexto.get("intencion") == "horarios_consulta"
+            and (("no hay" in normal and "seccion" in normal)
+                 or normal in {"si", "si indicame", "que hago", "y ahora que hago"})):
+        return ampliar_horarios()
 
     if fase in {"categorias", "temas"} and normal.isdecimal() and len(normal) <= 2:
         claves = contexto["categorias" if fase == "categorias" else "temas"]

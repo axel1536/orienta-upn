@@ -1,3 +1,6 @@
+import re
+import time
+
 import streamlit as st
 
 st.set_page_config(page_title="Orienta UPN", layout="centered")
@@ -12,10 +15,22 @@ except (ImportError, FileNotFoundError, ValueError, KeyError) as error:
 
 CLAVE_SESION = "orienta_v3"
 CLAVE_CONVERSACION = "orienta_conversacion"
+CLAVE_ANIMACION = "orienta_animacion"
+
+
+def escribir_progresivamente(texto):
+    for fragmento in re.split(r"(\s+)", texto):
+        if fragmento:
+            yield fragmento
+            if fragmento.strip():
+                time.sleep(0.012)
 
 
 def registrar(texto, accion=None):
-    st.session_state[CLAVE_SESION] = conversar(st.session_state[CLAVE_SESION], texto, accion)
+    with st.spinner("OrientaUPN está revisando tu consulta..."):
+        nueva_sesion = conversar(st.session_state[CLAVE_SESION], texto, accion)
+    st.session_state[CLAVE_SESION] = nueva_sesion
+    st.session_state[CLAVE_ANIMACION] = len(nueva_sesion["historial"])
 
 
 if CLAVE_SESION not in st.session_state:
@@ -28,6 +43,7 @@ with st.sidebar:
     if st.button("Nueva conversación", key="reiniciar_v3"):
         st.session_state[CLAVE_SESION] = crear_conversacion()
         st.session_state[CLAVE_CONVERSACION] += 1
+        st.session_state.pop(CLAVE_ANIMACION, None)
         st.rerun()
 
 st.title("Orienta UPN")
@@ -37,7 +53,8 @@ sesion = st.session_state[CLAVE_SESION]
 if not sesion["historial"]:
     st.info("Escribe tu primera consulta para comenzar.")
 
-for mensaje in sesion["historial"]:
+mensaje_animado = st.session_state.get(CLAVE_ANIMACION)
+for posicion, mensaje in enumerate(sesion["historial"], 1):
     with st.chat_message(mensaje["role"]):
         if mensaje["role"] == "user":
             st.write(mensaje["texto"])
@@ -45,9 +62,15 @@ for mensaje in sesion["historial"]:
         resultado = mensaje["resultado"]
         if resultado.get("tema"):
             st.caption(resultado["tema"])
-        st.write(resultado["respuesta"])
+        if posicion == mensaje_animado:
+            st.write_stream(escribir_progresivamente(resultado["respuesta"]))
+        else:
+            st.write(resultado["respuesta"])
         if resultado.get("fuente"):
             st.markdown(f"[Consultar fuente de UPN]({resultado['fuente']})")
+
+if mensaje_animado:
+    st.session_state.pop(CLAVE_ANIMACION, None)
 
 if sesion["historial"]:
     ultimo = sesion["historial"][-1]["resultado"]
