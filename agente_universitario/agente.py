@@ -7,6 +7,14 @@ import unicodedata
 CARPETA = Path(__file__).resolve().parent
 
 
+def cargar_configuracion(carpeta):
+    ruta = carpeta / "modelos" / "configuracion.json"
+    if not ruta.exists():
+        return {}
+    with ruta.open(encoding="utf-8") as archivo:
+        return json.load(archivo)
+
+
 def cargar_recursos(carpeta):
     modelo = joblib.load(
         carpeta / "modelos" / "clasificador.joblib"
@@ -48,10 +56,17 @@ TEMAS = {
     "traslado_carrera": "Traslado de carrera",
     "traslado_campus": "Traslado de campus",
     "contacto_atencion": "Contacto UPN"
+    ,"convalidacion_cursos": "Convalidación de cursos"
+    ,"examen_sustitutorio": "Examen sustitutorio"
+    ,"correo_institucional": "Correo institucional"
+    ,"calendario_academico": "Calendario académico"
+    ,"modalidad_estudios": "Modalidad de estudios"
+    ,"biblioteca_servicio": "Servicios de biblioteca"
 }
 
-UMBRAL_CONFIANZA = 0.20
-UMBRAL_MARGEN = 0.05
+CONFIGURACION = cargar_configuracion(CARPETA)
+UMBRAL_CONFIANZA = float(CONFIGURACION.get("umbral_confianza", 0.20))
+UMBRAL_MARGEN = float(CONFIGURACION.get("umbral_margen", 0.05))
 RAICES_UNIVERSITARIAS = (
     "upn", "mimundo", "universit", "matricul", "prematricul",
     "prerrequisit", "curso", "asignatur", "horari", "beca",
@@ -61,6 +76,8 @@ RAICES_UNIVERSITARIAS = (
     "cuenta", "acceso", "portal", "retiro", "retir", "traslad",
     "campus", "sede", "ciclo", "semestre", "calendario",
     "convocatoria", "vacante",
+    "convalid", "equivalen", "sustitut", "correo", "email",
+    "modalidad", "biblioteca", "libro", "catalogo", "repositorio",
 )
 RAICES_AJENAS = (
     "receta", "cocin", "ensalada", "comida", "ingrediente",

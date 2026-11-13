@@ -12,6 +12,12 @@ CATEGORIAS = {
     "traslados": ("Traslados", ["traslado_carrera", "traslado_campus"]),
     "acceso": ("Acceso a mi cuenta", ["acceso_recuperacion"]),
     "contacto": ("Contacto UPN", ["contacto_atencion"]),
+    "convalidaciones": ("Convalidación", ["convalidacion_cursos"]),
+    "examenes": ("Examen sustitutorio", ["examen_sustitutorio"]),
+    "correo": ("Correo institucional", ["correo_institucional"]),
+    "calendario": ("Calendario académico", ["calendario_academico"]),
+    "modalidad": ("Modalidad de estudios", ["modalidad_estudios"]),
+    "biblioteca": ("Biblioteca", ["biblioteca_servicio"]),
 }
 
 BREVES = {
@@ -29,6 +35,12 @@ BREVES = {
     "traslado_carrera": "Claro. Entra a MiMundoUPN → Solicitudes → Otras solicitudes → Nueva solicitud y busca Traslado de carrera. Antes de enviarla, revisa fechas, vacantes, costos y reconocimiento de cursos.",
     "traslado_campus": "Claro. Entra a MiMundoUPN → Solicitudes → Otras solicitudes → Nueva solicitud y busca Traslado de campus. Revisa las vacantes, el costo y si el cambio afecta algún beneficio antes de enviarla.",
     "contacto_atencion": "Claro. Entra a MiMundoUPN → Servicios → Contacto UPN. Ahí puedes registrar un ticket y revisar su seguimiento. Si ya enviaste uno, busca su estado antes de crear otro.",
+    "convalidacion_cursos": "Claro. Revisa en MiMundoUPN → Mis Documentos qué certificados, constancias o sílabos debes presentar. La convalidación depende de la evaluación y equivalencia de cada curso; si hay una observación, corrígela allí o consulta mediante Contacto UPN.",
+    "examen_sustitutorio": "Primero verifica que tu curso admita examen sustitutorio y que estés dentro del plazo. Después revisa en MiMundoUPN el trámite y el pago. Si no aparecen, consulta a Contacto UPN indicando tu curso y sección.",
+    "correo_institucional": "Ingresa con tu cuenta institucional y confirma que el correo termine en @upn.pe. Si olvidaste la clave o no llega el código, utiliza la recuperación de acceso. No compartas aquí contraseñas ni códigos.",
+    "calendario_academico": "Descarga el calendario académico vigente para tu programa y modalidad. Allí encontrarás el inicio y fin de clases, evaluaciones y fechas límite. Revisa también los avisos de MiMundoUPN por posibles cambios.",
+    "modalidad_estudios": "UPN puede ofrecer modalidad presencial, semipresencial o a distancia según la carrera. Para cambiarla, revisa la convocatoria y disponibilidad antes de registrar la solicitud en MiMundoUPN. Confirma también si afecta tus pensiones o beneficios.",
+    "biblioteca_servicio": "Puedes entrar a la Biblioteca Virtual desde MiMundoUPN, la App UPN, el Aula Virtual o la web de Biblioteca UPN. Usa tu correo institucional para consultar libros, bases de datos y el repositorio.",
 }
 
 
@@ -184,7 +196,11 @@ def _avanzar(texto="", contexto=None, accion=None):
     raices = {"matricula": ("matricul", "prematricul"), "pagos": ("pago", "pagar", "cuota", "pension", "deuda"),
               "horarios": ("horari",), "becas": ("beca",), "tramites": ("tramite",),
               "traslados": ("traslad",),
-              "acceso": ("acceso", "contrasen", "cuenta"), "contacto": ("contacto",)}
+              "acceso": ("acceso", "contrasen", "cuenta"), "contacto": ("contacto",),
+              "convalidaciones": ("convalid", "equivalen"),
+              "examenes": ("sustitut",), "correo": ("correo", "email"),
+              "calendario": ("calendario",), "modalidad": ("modalidad",),
+              "biblioteca": ("biblioteca", "libro", "catalogo", "repositorio")}
     palabras = normal.split()
 
     if any(p.startswith(("receta", "cocin", "ensalada", "comida", "ingrediente")) for p in palabras):
