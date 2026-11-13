@@ -62,6 +62,11 @@ TEMAS = {
     "calendario_academico": "Calendario académico",
     "modalidad_estudios": "Modalidad de estudios",
     "biblioteca_servicio": "Servicios de biblioteca",
+    "notas_calificaciones": "Notas y calificaciones",
+    "asistencia_clases": "Asistencia a clases",
+    "practicas_preprofesionales": "Prácticas preprofesionales",
+    "idiomas_requisito": "Requisito de idiomas",
+    "bolsa_laboral": "Bolsa laboral",
 }
 
 CONFIGURACION = cargar_configuracion(CARPETA)
@@ -78,6 +83,10 @@ RAICES_UNIVERSITARIAS = (
     "convocatoria", "vacante",
     "convalid", "equivalen", "sustitut", "correo", "email",
     "modalidad", "biblioteca", "libro", "catalogo", "repositorio",
+    "nota", "calific", "promedio", "asistencia", "inasistencia",
+    "falta", "tardanza", "practica", "preprofesional", "convenio",
+    "idioma", "ingles", "acredit", "laboral", "empleo", "curriculum",
+    "postul", "bolsa", "trabajo",
 )
 RAICES_AJENAS = (
     "receta", "cocin", "ensalada", "comida", "ingrediente",
@@ -85,7 +94,7 @@ RAICES_AJENAS = (
     "clima", "llover", "videojuego", "banco", "bancari", "dolar",
     "salud", "medic", "dieta", "presidente", "politic", "viaje",
     "turismo", "hotel", "celular", "computadora", "perro", "mascota",
-    "poema", "chiste", "trabajo", "empleo", "netflix", "spotify",
+    "poema", "chiste", "netflix", "spotify",
 )
 
 
@@ -100,11 +109,16 @@ def _palabras_normalizadas(texto):
 def consulta_en_alcance(texto):
     """Valida el tema sin intentar clasificarlo en una intención."""
     palabras = _palabras_normalizadas(texto)
-    if any(palabra.startswith(RAICES_AJENAS) for palabra in palabras):
+    tiene_tema_universitario = any(
+        palabra.startswith(RAICES_UNIVERSITARIAS)
+        for palabra in palabras
+    )
+    if (any(palabra.startswith(RAICES_AJENAS) for palabra in palabras)
+            and not tiene_tema_universitario):
         return False
     if re.search(r"\bcarn(?:é|et)\b", texto.lower()):
         return True
-    return any(palabra.startswith(RAICES_UNIVERSITARIAS) for palabra in palabras)
+    return tiene_tema_universitario
 
 
 def responder(consulta):

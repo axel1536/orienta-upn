@@ -18,6 +18,10 @@ CATEGORIAS = {
     "calendario": ("Calendario académico", ["calendario_academico"]),
     "modalidad": ("Modalidad de estudios", ["modalidad_estudios"]),
     "biblioteca": ("Biblioteca", ["biblioteca_servicio"]),
+    "rendimiento": ("Notas y asistencia", ["notas_calificaciones", "asistencia_clases"]),
+    "practicas": ("Prácticas preprofesionales", ["practicas_preprofesionales"]),
+    "idiomas": ("Idiomas", ["idiomas_requisito"]),
+    "empleabilidad": ("Bolsa laboral", ["bolsa_laboral"]),
 }
 
 BREVES = {
@@ -41,6 +45,11 @@ BREVES = {
     "calendario_academico": "Descarga el calendario académico vigente para tu programa y modalidad. Allí encontrarás el inicio y fin de clases, evaluaciones y fechas límite. Revisa también los avisos de MiMundoUPN por posibles cambios.",
     "modalidad_estudios": "UPN puede ofrecer modalidad presencial, semipresencial o a distancia según la carrera. Para cambiarla, revisa la convocatoria y disponibilidad antes de registrar la solicitud en MiMundoUPN. Confirma también si afecta tus pensiones o beneficios.",
     "biblioteca_servicio": "Puedes entrar a la Biblioteca Virtual desde MiMundoUPN, la App UPN, el Aula Virtual o la web de Biblioteca UPN. Usa tu correo institucional para consultar libros, bases de datos y el repositorio.",
+    "notas_calificaciones": "Claro. Entra a MiMundoUPN → Mis estudios → Cursos y Notas, selecciona el curso y abre Notas. Allí verás cada evaluación, su peso y la calificación registrada. Si detectas un error, solicita la revisión mediante Contacto UPN dentro del plazo correspondiente.",
+    "asistencia_clases": "Claro. Entra a MiMundoUPN → Mis estudios → Cursos y Notas, selecciona el curso y abre Asistencias. Allí podrás revisar por fecha si figuras presente o ausente. Si un registro es incorrecto, reúne la evidencia y consulta a UPN.",
+    "practicas_preprofesionales": "Para iniciar o registrar tus prácticas, revisa primero la modalidad y los documentos requeridos. Si necesitas la firma de un convenio, la empresa debe emitirlo y debes enviarlo junto con el plan de capacitación mediante Contacto UPN.",
+    "idiomas_requisito": "El idioma y nivel requerido dependen de tu programa. Revisa el requisito vigente antes de pagar o solicitar una evaluación. Puedes acreditarlo con las opciones aceptadas por UPN, como certificados válidos o el examen de suficiencia correspondiente.",
+    "bolsa_laboral": "Puedes buscar prácticas y empleos en el Portal Empléate UPN. Crea o actualiza tu perfil y CV, filtra las ofertas según tu carrera y postula desde el portal. El servicio está disponible para estudiantes y egresados.",
 }
 
 
@@ -217,7 +226,11 @@ def _avanzar(texto="", contexto=None, accion=None):
               "convalidaciones": ("convalid", "equivalen"),
               "examenes": ("sustitut",), "correo": ("correo", "email"),
               "calendario": ("calendario",), "modalidad": ("modalidad",),
-              "biblioteca": ("biblioteca", "libro", "catalogo", "repositorio")}
+              "biblioteca": ("biblioteca", "libro", "catalogo", "repositorio"),
+              "rendimiento": ("nota", "calific", "promedio", "asistencia", "inasistencia", "falta", "tardanza"),
+              "practicas": ("practica", "preprofesional", "convenio"),
+              "idiomas": ("idioma", "ingles", "acredit"),
+              "empleabilidad": ("laboral", "empleo", "curriculum", "postul", "bolsa", "trabajo")}
     palabras = normal.split()
 
     tiene_fecha = any(p.startswith(("fecha", "cuando", "hasta", "plazo", "calendario")) for p in palabras)
@@ -265,6 +278,18 @@ def _avanzar(texto="", contexto=None, accion=None):
             if any(p.startswith(("campus", "sede")) for p in palabras):
                 claves.append("traslado_campus")
             return elegir_tema(claves or CATEGORIAS[categoria][1])
+        if categoria == "rendimiento":
+            es_asistencia = any(p.startswith((
+                "asistencia", "inasistencia", "falta", "tardanza"
+            )) for p in palabras)
+            es_nota = any(p.startswith((
+                "nota", "calific", "promedio", "puntaje"
+            )) for p in palabras)
+            if es_asistencia and not es_nota:
+                return informar("asistencia_clases")
+            if es_nota and not es_asistencia:
+                return informar("notas_calificaciones")
+            return elegir_tema(CATEGORIAS[categoria][1])
         especifica = any(p.startswith(("fecha", "cuando", "hasta", "requisit", "document", "necesit", "condicion")) for p in palabras)
         if categoria == "tramites" or (categoria == "matricula" and not especifica):
             return elegir_tema(CATEGORIAS[categoria][1])

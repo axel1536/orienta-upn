@@ -92,4 +92,25 @@ PASOS = {
         ("¿Ya ingresaste a la Biblioteca Virtual con tu correo institucional?", "Accede desde MiMundoUPN, la App UPN, el Aula Virtual o la web de Biblioteca UPN con tu cuenta @upn.pe."),
         ("¿Encontraste el recurso que necesitas en el catálogo o las bases de datos?", "Si no lo encuentras, consulta los servicios de tu campus o utiliza Bibliotecario en Línea."),
     ],
+    "notas_calificaciones": [
+        ("¿Ya revisaste el curso en MiMundoUPN → Mis estudios → Cursos y Notas?", "Abre el curso y consulta la sección Notas para ver cada evaluación, su peso y la calificación registrada."),
+        ("Si detectaste un error, ¿ya reuniste la evidencia de la evaluación?", "Conserva la evaluación y registra la solicitud de revisión mediante Contacto UPN dentro del plazo vigente."),
+    ],
+    "asistencia_clases": [
+        ("¿Ya revisaste la sección Asistencias del curso en MiMundoUPN?", "Entra a Mis estudios → Cursos y Notas, abre el curso y revisa el registro por fecha."),
+        ("Si el registro es incorrecto, ¿tienes evidencia o un documento de sustento?", "Reúne la evidencia de asistencia o el sustento de la ausencia antes de consultar a UPN."),
+    ],
+    "practicas_preprofesionales": [
+        ("¿Ya confirmaste la modalidad de práctica que vas a realizar?", "Identifica si corresponde a prácticas preprofesionales, pasantía u otra modalidad."),
+        ("¿Ya solicitaste la carta de presentación para la empresa?", "Solicita la carta de presentación en MiMundoUPN con los datos de la empresa."),
+        ("¿Tienes el convenio y el plan de capacitación firmados?", "Envía ambos documentos mediante Contacto UPN para solicitar la firma y el registro correspondiente."),
+    ],
+    "idiomas_requisito": [
+        ("¿Ya verificaste qué idioma y nivel exige tu programa?", "Consulta el requisito vigente de tu carrera antes de registrar o pagar una solicitud."),
+        ("¿Ya identificaste cómo acreditarás el requisito?", "Revisa si corresponde un certificado aceptado, una evaluación de suficiencia u otra opción reconocida por UPN."),
+    ],
+    "bolsa_laboral": [
+        ("¿Ya creaste o actualizaste tu perfil en el Portal Empléate?", "Completa tus datos y actualiza tu currículum antes de postular."),
+        ("¿Ya filtraste las ofertas según tu carrera y el tipo de trabajo que buscas?", "Busca prácticas o empleos y revisa los requisitos de cada oferta antes de postular."),
+    ],
 }
