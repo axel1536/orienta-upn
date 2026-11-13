@@ -96,5 +96,47 @@
     "fuente": "https://contacto.upn.edu.pe/canales-de-atencion-upn",
     "area_responsable": "Contacto UPN - atención al estudiante",
     "fecha_revision": "2026-10-23"
+  },
+  {
+    "intencion": "convalidacion_cursos",
+    "respuesta": "Para solicitar la convalidación de cursos, revisa primero qué documentos exige UPN para acreditar tus estudios previos. Si provienes de traslado, ingresa a MiMundoUPN y revisa la sección Mis Documentos para cargar los certificados, constancias o sílabos solicitados. El reconocimiento depende de la evaluación académica y de la equivalencia de los cursos. Si el sistema muestra documentos pendientes u observados, corrígelos allí o registra un ticket en Contacto UPN.",
+    "fuente": "https://contacto.upn.edu.pe/documentos-pendientes",
+    "area_responsable": "Contacto UPN - convalidaciones y documentos académicos",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "examen_sustitutorio",
+    "respuesta": "Revisa primero si tu curso admite examen sustitutorio y si estás dentro del plazo establecido. Luego consulta en MiMundoUPN el trámite y el pago correspondiente. La evaluación sustitutoria no aplica necesariamente a todos los cursos y sus condiciones dependen del reglamento y del periodo. Si el trámite o la fecha no aparecen, registra una consulta en Contacto UPN indicando el curso y la sección.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/asistencia-cursos-y-notas",
+    "area_responsable": "Contacto UPN - evaluaciones y notas",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "correo_institucional",
+    "respuesta": "Para ingresar a tu correo institucional utiliza tu cuenta UPN y verifica que el dominio termine en @upn.pe. Si olvidaste la contraseña o no recibes el código de verificación, usa la recuperación de acceso de MiMundoUPN y revisa también tu correo personal y la carpeta de spam. Si el problema continúa, registra un ticket en Contacto UPN sin compartir tu contraseña ni códigos.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/accesos-upn",
+    "area_responsable": "Contacto UPN - accesos y correo institucional",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "calendario_academico",
+    "respuesta": "Consulta el calendario académico oficial que corresponde a tu programa y modalidad. Allí encontrarás el inicio y fin de clases, evaluaciones y fechas límite de procesos académicos. Descarga siempre la versión vigente y confirma si corresponde a Pregrado Tradicional o Adulto Trabajador. Si una fecha fue modificada, revisa los avisos de MiMundoUPN.",
+    "fuente": "https://contacto.upn.edu.pe/calendario-academico/descarga-el-calendario-academico",
+    "area_responsable": "Contacto UPN - calendario académico",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "modalidad_estudios",
+    "respuesta": "UPN puede ofrecer modalidades presencial, semipresencial o a distancia según la carrera y el programa. Si deseas cambiar de modalidad, revisa la convocatoria, los requisitos y la disponibilidad antes de registrar la solicitud en MiMundoUPN, Solicitudes, Otras solicitudes, Nueva solicitud. La aprobación requiere evaluación académica y puede afectar pensiones o beneficios; confirma las condiciones vigentes antes de pagar.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/traslados/como-solicito-mi-traslado-de-modalidad-de-estudios",
+    "area_responsable": "Contacto UPN - modalidades y traslados",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "biblioteca_servicio",
+    "respuesta": "Puedes ingresar a la Biblioteca Virtual desde MiMundoUPN, la aplicación UPN, el Aula Virtual o la web de Biblioteca UPN. Identifícate con tu correo institucional para consultar el catálogo, libros electrónicos, bases de datos y repositorio. Para préstamos, salas o recursos que no encuentres, consulta los servicios de tu campus o utiliza Bibliotecario en Línea.",
+    "fuente": "https://contacto.upn.edu.pe/como-debes-acceder-a-biblioteca-virtual-upn?kb_language=es_ES",
+    "area_responsable": "Biblioteca UPN",
+    "fecha_revision": "2026-11-13"
   }
 ]
