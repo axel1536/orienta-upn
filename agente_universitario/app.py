@@ -76,13 +76,13 @@ if sesion["historial"]:
     ultimo = sesion["historial"][-1]["resultado"]
     intencion = ultimo.get("intencion")
     consulta = sesion.get("consulta_actual")
-    if intencion and consulta:
+    if consulta and (intencion or ultimo.get("registrable")):
         id_respuesta = f"{st.session_state[CLAVE_CONVERSACION]}_{len(sesion['historial'])}"
         clave_guardada = "consulta_guardada_" + id_respuesta
         if not st.session_state.get(clave_guardada):
             try:
                 guardar_pendiente(
-                    consulta, ultimo["respuesta"], intencion,
+                    consulta, ultimo["respuesta"], intencion or "sin_prediccion",
                     ultimo.get("confianza"), ultimo.get("origen", "dialogo")
                 )
                 st.session_state[clave_guardada] = True

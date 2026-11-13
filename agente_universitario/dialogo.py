@@ -1,6 +1,6 @@
 import re
 import unicodedata
-from agente import responder, TEMAS, CONOCIMIENTO, MODELO
+from agente import responder, consulta_en_alcance, TEMAS, CONOCIMIENTO, MODELO
 from pasos import PASOS
 
 CATEGORIAS = {
@@ -165,6 +165,22 @@ def _avanzar(texto="", contexto=None, accion=None):
         if candidatos:
             return elegir_tema(candidatos)
 
+    genericas = {"hola", "buenos dias", "buenas tardes", "buenas noches", "consulta", "consultas", "ayuda", "tengo una consulta", "quiero hacer una consulta", "necesito ayuda", "necesito hacer una consulta"}
+    if not normal or normal in genericas:
+        return elegir_categoria()
+    if not consulta_en_alcance(texto):
+        return ({"respuesta": (
+                    "No tengo información suficiente sobre ese tema. "
+                    "Puedo orientarte sobre matrícula, horarios, becas, pagos, "
+                    "acceso y trámites universitarios. Para otros casos, "
+                    "te recomiendo comunicarte con Contacto UPN."
+                 ),
+                 "tema": "Fuera de los temas disponibles",
+                 "registrable": True,
+                 "fuente": "https://contacto.upn.edu.pe/canales-de-atencion-upn",
+                 "opciones": [opcion("Hacer otra consulta", "menu")]},
+                {"fase": "respondido"})
+
     raices = {"matricula": ("matricul", "prematricul"), "pagos": ("pago", "pagar", "cuota", "pension", "deuda"),
               "horarios": ("horari",), "becas": ("beca",), "tramites": ("tramite",),
               "traslados": ("traslad",),
@@ -226,9 +242,6 @@ def _avanzar(texto="", contexto=None, accion=None):
         if len(CATEGORIAS[categoria][1]) == 1:
             return informar(CATEGORIAS[categoria][1][0])
 
-    genericas = {"hola", "buenos dias", "buenas tardes", "buenas noches", "consulta", "consultas", "ayuda", "tengo una consulta", "quiero hacer una consulta", "necesito ayuda", "necesito hacer una consulta"}
-    if not normal or normal in genericas:
-        return elegir_categoria()
     resultado = responder(re.sub(r"\bcarnet\b", "carné", texto, flags=re.IGNORECASE))
     if resultado["estado"] == "sugerencia":
         salida, contexto = informar(resultado["intencion"], metodo="Modelo entrenado: regresión logística", motivo="El modelo clasificó tu pregunta y se recuperó la respuesta asociada. La respuesta procede de la base de conocimiento, no se genera libremente.")
@@ -237,8 +250,7 @@ def _avanzar(texto="", contexto=None, accion=None):
         consulta_modelo = re.sub(r"\bcarnet\b", "carné", texto, flags=re.IGNORECASE)
         vector = vectorizador.transform([consulta_modelo])
         puntajes = clasificador.decision_function(vector)[0]
-        if hasattr(clasificador, "predict_proba"):
-            salida["confianza"] = float(clasificador.predict_proba(vector)[0].max())
+        salida["confianza"] = resultado.get("confianza")
         primera = list(clasificador.classes_).index(resultado["intencion"])
         segunda = max((i for i in range(len(puntajes)) if i != primera), key=lambda i: puntajes[i])
         diferencias = clasificador.coef_[primera] - clasificador.coef_[segunda]
@@ -248,7 +260,12 @@ def _avanzar(texto="", contexto=None, accion=None):
         salida["explicacion"]["terminos"] = [termino for aporte, termino in aportes if aporte > 0][:3]
         salida["explicacion"]["comparada_con"] = TEMAS[str(clasificador.classes_[segunda])]
         return salida, contexto
-    return elegir_categoria(mensaje="Todavía no ubico bien el tema. ¿Se relaciona con alguna de estas opciones?")
+    return ({"respuesta": resultado["respuesta"],
+             "tema": "Necesito más información",
+             "registrable": True,
+             "fuente": resultado.get("fuente"),
+             "opciones": [opcion("Hacer otra consulta", "menu")]},
+            {"fase": "respondido"})
 
 
 def preguntar_paso(contexto):
