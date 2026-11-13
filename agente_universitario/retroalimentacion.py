@@ -4,6 +4,7 @@ import csv
 import json
 from pathlib import Path
 from threading import Lock
+import time
 from uuid import uuid4
 
 import pandas as pd
@@ -17,6 +18,24 @@ COLUMNAS = [
     "fecha_revision",
 ]
 _BLOQUEO = Lock()
+
+
+def _es_error_temporal(error):
+    respuesta = getattr(error, "response", None)
+    codigo = getattr(respuesta, "status_code", None)
+    return codigo in {429, 500, 502, 503, 504}
+
+
+def _con_reintentos(operacion):
+    """Reintenta límites de cuota y fallos temporales de Google Sheets."""
+    esperas = (2, 5, 10)
+    for intento in range(len(esperas) + 1):
+        try:
+            return operacion()
+        except Exception as error:
+            if not _es_error_temporal(error) or intento == len(esperas):
+                raise
+            time.sleep(esperas[intento])
 
 
 def _conexion_remota():
@@ -45,7 +64,9 @@ def _leer():
     if conexion is None:
         return _leer_local()
 
-    datos = conexion.read(worksheet=HOJA, ttl=0)
+    datos = _con_reintentos(
+        lambda: conexion.read(worksheet=HOJA, ttl=0)
+    )
     if datos is None or datos.empty:
         return []
     for columna in COLUMNAS:
@@ -85,7 +106,9 @@ def _escribir(registros):
         _escribir_local(registros)
         return
     datos = pd.DataFrame(registros, columns=COLUMNAS).fillna("")
-    conexion.update(worksheet=HOJA, data=datos)
+    _con_reintentos(
+        lambda: conexion.update(worksheet=HOJA, data=datos)
+    )
 
 
 def guardar_pendiente(consulta, respuesta, intencion_predicha,
@@ -122,7 +145,8 @@ def listar_registros(estado=None):
     return [registro for registro in registros if registro.get("estado") == estado]
 
 
-def revisar_registro(identificador, estado, intencion_confirmada=None):
+def revisar_registro(identificador, estado, intencion_confirmada=None,
+                     devolver_registros=False):
     if estado not in {"confirmada", "descartada"}:
         raise ValueError("Estado de revisión no permitido.")
     with _BLOQUEO:
@@ -140,10 +164,12 @@ def revisar_registro(identificador, estado, intencion_confirmada=None):
         if encontrado is None:
             raise KeyError("No se encontró la consulta.")
         _escribir(registros)
+    if devolver_registros:
+        return encontrado, registros
     return encontrado
 
 
-def confirmadas_csv():
+def confirmadas_csv(registros=None):
     salida = StringIO()
     escritor = csv.DictWriter(
         salida,
@@ -151,7 +177,9 @@ def confirmadas_csv():
         lineterminator="\n",
     )
     escritor.writeheader()
-    for registro in listar_registros("confirmada"):
+    if registros is None:
+        registros = listar_registros("confirmada")
+    for registro in registros:
         escritor.writerow({
             "consulta": registro["consulta"],
             "intencion": registro["intencion_confirmada"],
