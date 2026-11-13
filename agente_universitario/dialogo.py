@@ -23,7 +23,7 @@ CATEGORIAS = {
 BREVES = {
     "matricula_requisitos": "Claro. Para matricularte, entra a MiMundoUPN → Servicios → Matrícula en línea. Antes revisa que la prematrícula esté pagada y que no tengas problemas con prerrequisitos, vacantes o cruces de horario.",
     "matricula_fechas": "Claro. Revisa el calendario de tu programa y periodo, además de los avisos de MiMundoUPN. Si no aparece tu fecha, puedes consultarla mediante Contacto UPN.",
-    "horarios_consulta": "Entiendo, parece que tienes un cruce de horarios. Entra a MiMundoUPN → Cursos, revisa ambos cursos y verifica si existe otra sección disponible. ¿Quieres que te indique qué hacer si no encuentras otra sección?",
+    "horarios_consulta": "Claro. Para consultar tu horario de clases, entra a MiMundoUPN → Mis estudios → Horarios. Allí podrás ver tus cursos, secciones, días y horas. Ten en cuenta que no puedo acceder directamente a tu horario personal.",
     "becas_requisitos": "Claro. Primero elige la beca o beneficio que te interesa. Luego revisa sus requisitos y la convocatoria vigente en la sección de Becas de UPN, porque las condiciones cambian según el beneficio.",
     "pagos_consulta": "Entiendo. Entra a MiMundoUPN → Pagos → Obligaciones por pagar y abre el detalle del cobro. Si no lo reconoces, no lo pagues todavía: registra una consulta en Contacto UPN con el concepto y el monto.",
     "constancia_solicitud": "Claro. En MiMundoUPN entra a Solicitudes → Listado de trámites, elige Constancia de Estudios, revisa tus datos y sigue las indicaciones de pago. Después podrás revisar su estado en Solicitudes.",
@@ -85,9 +85,6 @@ def elegir_tema(claves):
 def informar(intencion, metodo="Reglas del diálogo", motivo=None):
     registro = CONOCIMIENTO[intencion]
     opciones = [opcion("Hacer otra consulta", "menu")]
-    if intencion == "horarios_consulta":
-        opciones = [opcion("Sí, indícame", "detalle:horarios"),
-                    opcion("Hacer otra consulta", "menu")]
     return ({"respuesta": BREVES[intencion], "tema": TEMAS[intencion],
              "intencion": intencion,
              "origen": "modelo" if metodo.startswith("Modelo entrenado") else "regla",
@@ -96,6 +93,26 @@ def informar(intencion, metodo="Reglas del diálogo", motivo=None):
              "fecha_revision": registro.get("fecha_revision", ""),
              "opciones": opciones,
              "explicacion": {"metodo": metodo, "motivo": motivo or "El tema o la opción elegida corresponde a una única intención; se recupera su guía de la base de conocimiento.", "intencion": intencion}},
+            {"fase": "respondido", "intencion": intencion})
+
+
+def informar_cruce_horarios():
+    intencion = "horarios_consulta"
+    registro = CONOCIMIENTO[intencion]
+    respuesta = (
+        "Entiendo, parece que tienes un cruce de horarios. Entra a "
+        "MiMundoUPN → Mis estudios → Horarios, revisa ambos cursos y verifica "
+        "si existe otra sección disponible. ¿Quieres que te indique qué hacer "
+        "si no encuentras otra sección?"
+    )
+    return ({"respuesta": respuesta, "tema": TEMAS[intencion],
+             "intencion": intencion, "origen": "regla",
+             "fuente": registro["fuente"], "detalle": registro["respuesta"],
+             "opciones": [opcion("Sí, indícame", "detalle:horarios"),
+                          opcion("Hacer otra consulta", "menu")],
+             "explicacion": {"metodo": "Reglas del diálogo",
+                             "motivo": "La consulta menciona explícitamente un cruce o dos cursos en el mismo horario.",
+                             "intencion": intencion}},
             {"fase": "respondido", "intencion": intencion})
 
 
@@ -213,7 +230,7 @@ def _avanzar(texto="", contexto=None, accion=None):
         return elegir_tema(["matricula_requisitos", "matricula_fechas"])
     if ("misma hora" in normal or "misma horario" in normal or "cruce de horario" in normal
             or ("dos cursos" in normal and any(p.startswith("hora") for p in palabras))):
-        return informar("horarios_consulta")
+        return informar_cruce_horarios()
     if (any(p.startswith(("cobro", "cargo", "monto")) for p in palabras)
             and any(p.startswith(("desconoc", "reconoc", "incorrect", "equivoc")) for p in palabras)):
         return informar("pagos_consulta")
