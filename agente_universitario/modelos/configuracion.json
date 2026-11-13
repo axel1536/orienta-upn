@@ -1,0 +1,15 @@
+{
+  "version": "20_intenciones",
+  "cantidad_intenciones": 20,
+  "consultas_totales": 800,
+  "entrenamiento_final": 680,
+  "prueba": 120,
+  "C": 8.0,
+  "umbral_confianza": 0.3,
+  "umbral_margen": 0.02,
+  "precision_aceptada_validacion": 0.9529411764705882,
+  "cobertura_validacion": 0.7083333333333334,
+  "accuracy_test": 0.975,
+  "f1_macro_test": 0.97488344988345,
+  "random_state": 42
+}
