@@ -138,5 +138,40 @@
     "fuente": "https://contacto.upn.edu.pe/como-debes-acceder-a-biblioteca-virtual-upn?kb_language=es_ES",
     "area_responsable": "Biblioteca UPN",
     "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "notas_calificaciones",
+    "respuesta": "Para consultar tus notas del ciclo actual, ingresa a MiMundoUPN, abre Mis estudios y luego Cursos y Notas. Selecciona el curso y revisa la sección Notas, donde aparecen el tipo de evaluación, el peso y la calificación registrada. También puedes usar Simular Promedio como referencia. Si consideras que una nota es incorrecta, solicita su revisión por Contacto UPN dentro del plazo vigente y adjunta la evidencia correspondiente.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/asistencia-cursos-y-notas",
+    "area_responsable": "Contacto UPN - cursos y calificaciones",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "asistencia_clases",
+    "respuesta": "Para revisar tus asistencias y faltas, ingresa a MiMundoUPN, selecciona Mis estudios y luego Cursos y Notas. Abre el curso que deseas consultar y revisa la sección Asistencias, donde se muestra la fecha, la hora y el estado registrado. Si encuentras una falta incorrecta o necesitas justificar una ausencia, conserva la evidencia y consulta el procedimiento aplicable mediante Contacto UPN.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/asistencia-cursos-y-notas",
+    "area_responsable": "Contacto UPN - asistencia y cursos",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "practicas_preprofesionales",
+    "respuesta": "Para realizar prácticas preprofesionales, revisa primero la modalidad aplicable y los documentos que solicita UPN. Si necesitas formalizar un convenio, solicita tu carta de presentación en MiMundoUPN. La empresa debe emitir el convenio y el plan de capacitación; después debes enviarlos firmados por la empresa y por ti mediante Contacto UPN, en el motivo correspondiente al proceso de firma de convenio. La universidad revisará los documentos antes de completar el registro.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/proceso-del-convenio-de-practicas-preprofesionales",
+    "area_responsable": "Contacto UPN - prácticas preprofesionales",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "idiomas_requisito",
+    "respuesta": "El idioma y nivel exigidos dependen de tu carrera o programa y del Reglamento de Grados y Títulos vigente. UPN contempla opciones como certificados emitidos por la universidad, exámenes de suficiencia y determinados certificados internacionales. Antes de registrar o pagar una solicitud, verifica el idioma y nivel que corresponden a tu programa, así como la vigencia y aceptación del documento que presentarás.",
+    "fuente": "https://contacto.upn.edu.pe/es_ES/convalidacion-de-idioma",
+    "area_responsable": "Contacto UPN - requisito de idiomas",
+    "fecha_revision": "2026-11-13"
+  },
+  {
+    "intencion": "bolsa_laboral",
+    "respuesta": "La Bolsa de Empleo UPN está disponible en el Portal Empléate para estudiantes y egresados. Crea o actualiza tu perfil, completa tu currículum, busca ofertas según tu carrera y modalidad laboral, y postula desde el portal. Allí puedes encontrar prácticas preprofesionales, prácticas profesionales y empleos de tiempo parcial o completo. La disponibilidad de vacantes depende de las empresas que publican las ofertas.",
+    "fuente": "https://www.upn.edu.pe/empleabilidad/bolsa-de-trabajo",
+    "area_responsable": "Empleabilidad UPN",
+    "fecha_revision": "2026-11-13"
   }
 ]
