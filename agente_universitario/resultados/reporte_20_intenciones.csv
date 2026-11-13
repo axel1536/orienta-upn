@@ -1,0 +1,24 @@
+﻿,precision,recall,f1-score,support
+acceso_recuperacion,1.0,1.0,1.0,6.0
+becas_requisitos,1.0,1.0,1.0,6.0
+biblioteca_servicio,1.0,1.0,1.0,6.0
+calendario_academico,0.8333333333333334,0.8333333333333334,0.8333333333333334,6.0
+carne_solicitud,1.0,1.0,1.0,6.0
+certificado_estudios,1.0,1.0,1.0,6.0
+constancia_solicitud,1.0,1.0,1.0,6.0
+contacto_atencion,0.8571428571428571,1.0,0.9230769230769231,6.0
+convalidacion_cursos,1.0,0.8333333333333334,0.9090909090909091,6.0
+correo_institucional,1.0,0.8333333333333334,0.9090909090909091,6.0
+examen_sustitutorio,1.0,1.0,1.0,6.0
+horarios_consulta,1.0,1.0,1.0,6.0
+matricula_fechas,1.0,1.0,1.0,6.0
+matricula_requisitos,1.0,1.0,1.0,6.0
+modalidad_estudios,0.8571428571428571,1.0,0.9230769230769231,6.0
+pagos_consulta,1.0,1.0,1.0,6.0
+retiro_ciclo,1.0,1.0,1.0,6.0
+retiro_curso,1.0,1.0,1.0,6.0
+traslado_campus,1.0,1.0,1.0,6.0
+traslado_carrera,1.0,1.0,1.0,6.0
+accuracy,0.975,0.975,0.975,0.975
+macro avg,0.9773809523809524,0.975,0.97488344988345,120.0
+weighted avg,0.9773809523809524,0.975,0.9748834498834499,120.0

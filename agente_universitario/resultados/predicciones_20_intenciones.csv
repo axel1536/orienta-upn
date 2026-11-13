@@ -1,0 +1,121 @@
+﻿consulta,intencion_real,intencion_predicha,acierto
+¿Qué debo hacer para conocer las condiciones necesarias para inscribirme?,matricula_requisitos,matricula_requisitos,True
+¿Me pueden explicar cómo conocer las condiciones necesarias para inscribirme?,matricula_requisitos,matricula_requisitos,True
+Tengo dudas sobre cómo conocer las condiciones necesarias para inscribirme.,matricula_requisitos,matricula_requisitos,True
+¿A qué área debo consultar para conocer las condiciones necesarias para inscribirme?,matricula_requisitos,matricula_requisitos,True
+No sé cuál es el procedimiento para conocer las condiciones necesarias para inscribirme.,matricula_requisitos,matricula_requisitos,True
+¿En qué sección puedo conocer las condiciones necesarias para inscribirme?,matricula_requisitos,matricula_requisitos,True
+¿Qué debo hacer para saber qué turno de matrícula me corresponde?,matricula_fechas,matricula_fechas,True
+¿Me pueden explicar cómo saber qué turno de matrícula me corresponde?,matricula_fechas,matricula_fechas,True
+Tengo dudas sobre cómo saber qué turno de matrícula me corresponde.,matricula_fechas,matricula_fechas,True
+¿A qué área debo consultar para saber qué turno de matrícula me corresponde?,matricula_fechas,matricula_fechas,True
+No sé cuál es el procedimiento para saber qué turno de matrícula me corresponde.,matricula_fechas,matricula_fechas,True
+¿En qué sección puedo saber qué turno de matrícula me corresponde?,matricula_fechas,matricula_fechas,True
+¿Qué debo hacer para saber qué consecuencias tiene retirar un curso?,retiro_curso,retiro_curso,True
+¿Me pueden explicar cómo saber qué consecuencias tiene retirar un curso?,retiro_curso,retiro_curso,True
+Tengo dudas sobre cómo saber qué consecuencias tiene retirar un curso.,retiro_curso,retiro_curso,True
+¿A qué área debo consultar para saber qué consecuencias tiene retirar un curso?,retiro_curso,retiro_curso,True
+No sé cuál es el procedimiento para saber qué consecuencias tiene retirar un curso.,retiro_curso,retiro_curso,True
+¿En qué sección puedo saber qué consecuencias tiene retirar un curso?,retiro_curso,retiro_curso,True
+¿Qué debo hacer para saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,retiro_ciclo,True
+¿Me pueden explicar cómo saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,retiro_ciclo,True
+Tengo dudas sobre cómo saber qué consecuencias tiene suspender el periodo.,retiro_ciclo,retiro_ciclo,True
+¿A qué área debo consultar para saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,retiro_ciclo,True
+No sé cuál es el procedimiento para saber qué consecuencias tiene suspender el periodo.,retiro_ciclo,retiro_ciclo,True
+¿En qué sección puedo saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,retiro_ciclo,True
+¿Qué debo hacer para consultar el estado de mi traslado de carrera?,traslado_carrera,traslado_carrera,True
+¿Me pueden explicar cómo consultar el estado de mi traslado de carrera?,traslado_carrera,traslado_carrera,True
+Tengo dudas sobre cómo consultar el estado de mi traslado de carrera.,traslado_carrera,traslado_carrera,True
+¿A qué área debo consultar para consultar el estado de mi traslado de carrera?,traslado_carrera,traslado_carrera,True
+No sé cuál es el procedimiento para consultar el estado de mi traslado de carrera.,traslado_carrera,traslado_carrera,True
+¿En qué sección puedo consultar el estado de mi traslado de carrera?,traslado_carrera,traslado_carrera,True
+¿Qué debo hacer para verificar el estado de mi traslado de campus?,traslado_campus,traslado_campus,True
+¿Me pueden explicar cómo verificar el estado de mi traslado de campus?,traslado_campus,traslado_campus,True
+Tengo dudas sobre cómo verificar el estado de mi traslado de campus.,traslado_campus,traslado_campus,True
+¿A qué área debo consultar para verificar el estado de mi traslado de campus?,traslado_campus,traslado_campus,True
+No sé cuál es el procedimiento para verificar el estado de mi traslado de campus.,traslado_campus,traslado_campus,True
+¿En qué sección puedo verificar el estado de mi traslado de campus?,traslado_campus,traslado_campus,True
+¿Qué debo hacer para corregir datos incorrectos de mi constancia?,constancia_solicitud,constancia_solicitud,True
+¿Me pueden explicar cómo corregir datos incorrectos de mi constancia?,constancia_solicitud,constancia_solicitud,True
+Tengo dudas sobre cómo corregir datos incorrectos de mi constancia.,constancia_solicitud,constancia_solicitud,True
+¿A qué área debo consultar para corregir datos incorrectos de mi constancia?,constancia_solicitud,constancia_solicitud,True
+No sé cuál es el procedimiento para corregir datos incorrectos de mi constancia.,constancia_solicitud,constancia_solicitud,True
+¿En qué sección puedo corregir datos incorrectos de mi constancia?,constancia_solicitud,constancia_solicitud,True
+¿Qué debo hacer para corregir datos incorrectos del certificado de estudios?,certificado_estudios,certificado_estudios,True
+¿Me pueden explicar cómo corregir datos incorrectos del certificado de estudios?,certificado_estudios,certificado_estudios,True
+Tengo dudas sobre cómo corregir datos incorrectos del certificado de estudios.,certificado_estudios,certificado_estudios,True
+¿A qué área debo consultar para corregir datos incorrectos del certificado de estudios?,certificado_estudios,certificado_estudios,True
+No sé cuál es el procedimiento para corregir datos incorrectos del certificado de estudios.,certificado_estudios,certificado_estudios,True
+¿En qué sección puedo corregir datos incorrectos del certificado de estudios?,certificado_estudios,certificado_estudios,True
+¿Qué debo hacer para consultar el resultado de mi postulación a una beca?,becas_requisitos,becas_requisitos,True
+¿Me pueden explicar cómo consultar el resultado de mi postulación a una beca?,becas_requisitos,becas_requisitos,True
+Tengo dudas sobre cómo consultar el resultado de mi postulación a una beca.,becas_requisitos,becas_requisitos,True
+¿A qué área debo consultar para consultar el resultado de mi postulación a una beca?,becas_requisitos,becas_requisitos,True
+No sé cuál es el procedimiento para consultar el resultado de mi postulación a una beca.,becas_requisitos,becas_requisitos,True
+¿En qué sección puedo consultar el resultado de mi postulación a una beca?,becas_requisitos,becas_requisitos,True
+¿Qué debo hacer para solicitar ayuda por un cobro que no reconozco?,pagos_consulta,pagos_consulta,True
+¿Me pueden explicar cómo solicitar ayuda por un cobro que no reconozco?,pagos_consulta,pagos_consulta,True
+Tengo dudas sobre cómo solicitar ayuda por un cobro que no reconozco.,pagos_consulta,pagos_consulta,True
+¿A qué área debo consultar para solicitar ayuda por un cobro que no reconozco?,pagos_consulta,pagos_consulta,True
+No sé cuál es el procedimiento para solicitar ayuda por un cobro que no reconozco.,pagos_consulta,pagos_consulta,True
+¿En qué sección puedo solicitar ayuda por un cobro que no reconozco?,pagos_consulta,pagos_consulta,True
+¿Qué debo hacer para solucionar que no llegue el código de verificación?,acceso_recuperacion,acceso_recuperacion,True
+¿Me pueden explicar cómo solucionar que no llegue el código de verificación?,acceso_recuperacion,acceso_recuperacion,True
+Tengo dudas sobre cómo solucionar que no llegue el código de verificación.,acceso_recuperacion,acceso_recuperacion,True
+¿A qué área debo consultar para solucionar que no llegue el código de verificación?,acceso_recuperacion,acceso_recuperacion,True
+No sé cuál es el procedimiento para solucionar que no llegue el código de verificación.,acceso_recuperacion,acceso_recuperacion,True
+¿En qué sección puedo solucionar que no llegue el código de verificación?,acceso_recuperacion,acceso_recuperacion,True
+¿Qué debo hacer para hacer seguimiento a una solicitud enviada?,contacto_atencion,contacto_atencion,True
+¿Me pueden explicar cómo hacer seguimiento a una solicitud enviada?,contacto_atencion,contacto_atencion,True
+Tengo dudas sobre cómo hacer seguimiento a una solicitud enviada.,contacto_atencion,contacto_atencion,True
+¿A qué área debo consultar para hacer seguimiento a una solicitud enviada?,contacto_atencion,contacto_atencion,True
+No sé cuál es el procedimiento para hacer seguimiento a una solicitud enviada.,contacto_atencion,contacto_atencion,True
+¿En qué sección puedo hacer seguimiento a una solicitud enviada?,contacto_atencion,contacto_atencion,True
+¿Qué debo hacer para resolver un cruce de horarios?,horarios_consulta,horarios_consulta,True
+¿Me pueden explicar cómo resolver un cruce de horarios?,horarios_consulta,horarios_consulta,True
+Tengo dudas sobre cómo resolver un cruce de horarios.,horarios_consulta,horarios_consulta,True
+¿A qué área debo consultar para resolver un cruce de horarios?,horarios_consulta,horarios_consulta,True
+No sé cuál es el procedimiento para resolver un cruce de horarios.,horarios_consulta,horarios_consulta,True
+¿En qué sección puedo resolver un cruce de horarios?,horarios_consulta,horarios_consulta,True
+¿Qué debo hacer para consultar cuándo entregarán mi carnet?,carne_solicitud,carne_solicitud,True
+¿Me pueden explicar cómo consultar cuándo entregarán mi carnet?,carne_solicitud,carne_solicitud,True
+Tengo dudas sobre cómo consultar cuándo entregarán mi carnet.,carne_solicitud,carne_solicitud,True
+¿A qué área debo consultar para consultar cuándo entregarán mi carnet?,carne_solicitud,carne_solicitud,True
+No sé cuál es el procedimiento para consultar cuándo entregarán mi carnet.,carne_solicitud,carne_solicitud,True
+¿En qué sección puedo consultar cuándo entregarán mi carnet?,carne_solicitud,carne_solicitud,True
+¿La convalidación de cursos tiene algún costo?,convalidacion_cursos,convalidacion_cursos,True
+"Vengo de otra universidad, ¿qué cursos me pueden reconocer?",convalidacion_cursos,convalidacion_cursos,True
+¿Se pueden convalidar cursos de una carrera técnica?,convalidacion_cursos,convalidacion_cursos,True
+¿Dónde veo la tabla de equivalencias de los cursos?,convalidacion_cursos,calendario_academico,False
+Quiero saber qué documentos necesito para convalidar asignaturas.,convalidacion_cursos,convalidacion_cursos,True
+¿Qué requisitos piden para reconocer créditos de otra universidad?,convalidacion_cursos,convalidacion_cursos,True
+¿La nota del sustitutorio puede bajar mi promedio?,examen_sustitutorio,examen_sustitutorio,True
+"Mi pago del sustitutorio no figura, ¿cómo lo soluciono?",examen_sustitutorio,examen_sustitutorio,True
+¿Qué requisitos debo cumplir para dar el examen sustitutorio?,examen_sustitutorio,examen_sustitutorio,True
+¿Dónde aparece la nota del examen sustitutorio?,examen_sustitutorio,examen_sustitutorio,True
+¿En qué parte de MiMundoUPN solicito el examen sustitutorio?,examen_sustitutorio,examen_sustitutorio,True
+¿Cuándo publican el cronograma de exámenes sustitutorios?,examen_sustitutorio,examen_sustitutorio,True
+Necesito actualizar los datos vinculados a mi correo UPN.,correo_institucional,correo_institucional,True
+¿Qué aplicaciones puedo usar con mi cuenta de correo UPN?,correo_institucional,correo_institucional,True
+¿Cómo agrego mi correo UPN a la aplicación de Outlook?,correo_institucional,correo_institucional,True
+¿Dónde reviso las comunicaciones enviadas por UPN?,correo_institucional,contacto_atencion,False
+¿El correo correcto termina en @upn.pe?,correo_institucional,correo_institucional,True
+"Mi cuenta de correo fue suspendida, ¿a quién contacto?",correo_institucional,correo_institucional,True
+¿Cuándo termina el ciclo para mi modalidad de estudios?,calendario_academico,modalidad_estudios,False
+Quiero saber cuándo finaliza el periodo académico.,calendario_academico,calendario_academico,True
+¿Dónde está el calendario para Adulto Trabajador?,calendario_academico,calendario_academico,True
+¿El calendario académico es igual para todos los campus?,calendario_academico,calendario_academico,True
+¿Dónde aparecen los feriados y días sin clases?,calendario_academico,calendario_academico,True
+¿Cuál es la fecha de inicio del próximo ciclo?,calendario_academico,calendario_academico,True
+¿Qué modalidades están autorizadas para mi programa?,modalidad_estudios,modalidad_estudios,True
+¿Qué documentos necesito para cambiar de modalidad?,modalidad_estudios,modalidad_estudios,True
+¿Qué modalidades de estudio ofrece UPN?,modalidad_estudios,modalidad_estudios,True
+¿El cambio de modalidad se aplica en el siguiente ciclo?,modalidad_estudios,modalidad_estudios,True
+¿Cómo afecta la modalidad a mi fecha de egreso?,modalidad_estudios,modalidad_estudios,True
+¿Puedo cambiar de Adulto Trabajador a Pregrado Tradicional?,modalidad_estudios,modalidad_estudios,True
+¿Dónde puedo buscar libros digitales para mis cursos?,biblioteca_servicio,biblioteca_servicio,True
+¿Dónde encuentro la bibliografía de mi curso?,biblioteca_servicio,biblioteca_servicio,True
+¿Puedo acceder a bases de datos académicas desde casa?,biblioteca_servicio,biblioteca_servicio,True
+¿La biblioteca presta libros a domicilio?,biblioteca_servicio,biblioteca_servicio,True
+¿Puedo usar la biblioteca si soy egresado?,biblioteca_servicio,biblioteca_servicio,True
+¿Qué usuario necesito para entrar a la Biblioteca Virtual?,biblioteca_servicio,biblioteca_servicio,True

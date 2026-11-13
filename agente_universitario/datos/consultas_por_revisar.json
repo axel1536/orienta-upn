@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fa8dd08f87ba43f8977e4367593a4f42",
+    "fecha": "2026-11-13T10:33:55-05:00",
+    "consulta": "dime la capital de francia",
+    "respuesta": "¡Hola! No tengo información suficiente sobre ese tema. Puedo orientarte sobre matrícula, horarios, becas, pagos, acceso y trámites universitarios. Para otros casos, te recomiendo comunicarte con Contacto UPN.",
+    "intencion_predicha": "sin_prediccion",
+    "confianza": "No disponible",
+    "origen": "dialogo",
+    "estado": "pendiente",
+    "intencion_confirmada": "Pendiente",
+    "fecha_revision": "Pendiente"
+  },
+  {
+    "id": "27ad815c70f34366ad750657befa91c9",
+    "fecha": "2026-11-13T10:34:23-05:00",
+    "consulta": "¿Cómo se solicita un certificado analítico parcial con las notas y materias que ya aprobé?",
+    "respuesta": "Claro. Entra a MiMundoUPN → Solicitudes → Documentos Virtuales → Solicitudes. Elige el certificado que necesitas, sigue el pago y revisa su estado hasta que puedas descargarlo.",
+    "intencion_predicha": "certificado_estudios",
+    "confianza": 0.3223,
+    "origen": "modelo",
+    "estado": "pendiente",
+    "intencion_confirmada": "Pendiente",
+    "fecha_revision": "Pendiente"
+  },
+  {
+    "id": "c4245e0fef9d4b6e836c0f3543fe1b7c",
+    "fecha": "2026-11-13T10:34:53-05:00",
+    "consulta": "¿Qué debo hacer si necesito pedir una constancia de examen para presentar en mi trabajo el día de la prueba?",
+    "respuesta": "No tengo información suficiente sobre ese tema. Puedo orientarte sobre matrícula, horarios, becas, pagos, acceso y trámites universitarios. Para otros casos, te recomiendo comunicarte con Contacto UPN.",
+    "intencion_predicha": "sin_prediccion",
+    "confianza": "No disponible",
+    "origen": "dialogo",
+    "estado": "pendiente",
+    "intencion_confirmada": "Pendiente",
+    "fecha_revision": "Pendiente"
+  }
+]

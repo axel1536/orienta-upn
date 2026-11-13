@@ -1,0 +1,121 @@
+﻿id,consulta,intencion,origen,grupo,experimento,par_intenciones,particion,numero_intencion
+35,¿Qué debo hacer para conocer las condiciones necesarias para inscribirme?,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,35
+36,¿Me pueden explicar cómo conocer las condiciones necesarias para inscribirme?,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,36
+37,Tengo dudas sobre cómo conocer las condiciones necesarias para inscribirme.,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,37
+38,¿A qué área debo consultar para conocer las condiciones necesarias para inscribirme?,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,38
+39,No sé cuál es el procedimiento para conocer las condiciones necesarias para inscribirme.,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,39
+40,¿En qué sección puedo conocer las condiciones necesarias para inscribirme?,matricula_requisitos,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,40
+75,¿Qué debo hacer para saber qué turno de matrícula me corresponde?,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,35
+76,¿Me pueden explicar cómo saber qué turno de matrícula me corresponde?,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,36
+77,Tengo dudas sobre cómo saber qué turno de matrícula me corresponde.,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,37
+78,¿A qué área debo consultar para saber qué turno de matrícula me corresponde?,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,38
+79,No sé cuál es el procedimiento para saber qué turno de matrícula me corresponde.,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,39
+80,¿En qué sección puedo saber qué turno de matrícula me corresponde?,matricula_fechas,sintetica,exp1_prueba,1,matricula_requisitos + matricula_fechas,prueba,40
+115,¿Qué debo hacer para saber qué consecuencias tiene retirar un curso?,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,35
+116,¿Me pueden explicar cómo saber qué consecuencias tiene retirar un curso?,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,36
+117,Tengo dudas sobre cómo saber qué consecuencias tiene retirar un curso.,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,37
+118,¿A qué área debo consultar para saber qué consecuencias tiene retirar un curso?,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,38
+119,No sé cuál es el procedimiento para saber qué consecuencias tiene retirar un curso.,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,39
+120,¿En qué sección puedo saber qué consecuencias tiene retirar un curso?,retiro_curso,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,40
+155,¿Qué debo hacer para saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,35
+156,¿Me pueden explicar cómo saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,36
+157,Tengo dudas sobre cómo saber qué consecuencias tiene suspender el periodo.,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,37
+158,¿A qué área debo consultar para saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,38
+159,No sé cuál es el procedimiento para saber qué consecuencias tiene suspender el periodo.,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,39
+160,¿En qué sección puedo saber qué consecuencias tiene suspender el periodo?,retiro_ciclo,sintetica,exp2_prueba,2,retiro_curso + retiro_ciclo,prueba,40
+195,¿Qué debo hacer para consultar el estado de mi traslado de carrera?,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,35
+196,¿Me pueden explicar cómo consultar el estado de mi traslado de carrera?,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,36
+197,Tengo dudas sobre cómo consultar el estado de mi traslado de carrera.,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,37
+198,¿A qué área debo consultar para consultar el estado de mi traslado de carrera?,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,38
+199,No sé cuál es el procedimiento para consultar el estado de mi traslado de carrera.,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,39
+200,¿En qué sección puedo consultar el estado de mi traslado de carrera?,traslado_carrera,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,40
+235,¿Qué debo hacer para verificar el estado de mi traslado de campus?,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,35
+236,¿Me pueden explicar cómo verificar el estado de mi traslado de campus?,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,36
+237,Tengo dudas sobre cómo verificar el estado de mi traslado de campus.,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,37
+238,¿A qué área debo consultar para verificar el estado de mi traslado de campus?,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,38
+239,No sé cuál es el procedimiento para verificar el estado de mi traslado de campus.,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,39
+240,¿En qué sección puedo verificar el estado de mi traslado de campus?,traslado_campus,sintetica,exp3_prueba,3,traslado_carrera + traslado_campus,prueba,40
+275,¿Qué debo hacer para corregir datos incorrectos de mi constancia?,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,35
+276,¿Me pueden explicar cómo corregir datos incorrectos de mi constancia?,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,36
+277,Tengo dudas sobre cómo corregir datos incorrectos de mi constancia.,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,37
+278,¿A qué área debo consultar para corregir datos incorrectos de mi constancia?,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,38
+279,No sé cuál es el procedimiento para corregir datos incorrectos de mi constancia.,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,39
+280,¿En qué sección puedo corregir datos incorrectos de mi constancia?,constancia_solicitud,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,40
+315,¿Qué debo hacer para corregir datos incorrectos del certificado de estudios?,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,35
+316,¿Me pueden explicar cómo corregir datos incorrectos del certificado de estudios?,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,36
+317,Tengo dudas sobre cómo corregir datos incorrectos del certificado de estudios.,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,37
+318,¿A qué área debo consultar para corregir datos incorrectos del certificado de estudios?,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,38
+319,No sé cuál es el procedimiento para corregir datos incorrectos del certificado de estudios.,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,39
+320,¿En qué sección puedo corregir datos incorrectos del certificado de estudios?,certificado_estudios,sintetica,exp4_prueba,4,constancia_solicitud + certificado_estudios,prueba,40
+355,¿Qué debo hacer para consultar el resultado de mi postulación a una beca?,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,35
+356,¿Me pueden explicar cómo consultar el resultado de mi postulación a una beca?,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,36
+357,Tengo dudas sobre cómo consultar el resultado de mi postulación a una beca.,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,37
+358,¿A qué área debo consultar para consultar el resultado de mi postulación a una beca?,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,38
+359,No sé cuál es el procedimiento para consultar el resultado de mi postulación a una beca.,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,39
+360,¿En qué sección puedo consultar el resultado de mi postulación a una beca?,becas_requisitos,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,40
+395,¿Qué debo hacer para solicitar ayuda por un cobro que no reconozco?,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,35
+396,¿Me pueden explicar cómo solicitar ayuda por un cobro que no reconozco?,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,36
+397,Tengo dudas sobre cómo solicitar ayuda por un cobro que no reconozco.,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,37
+398,¿A qué área debo consultar para solicitar ayuda por un cobro que no reconozco?,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,38
+399,No sé cuál es el procedimiento para solicitar ayuda por un cobro que no reconozco.,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,39
+400,¿En qué sección puedo solicitar ayuda por un cobro que no reconozco?,pagos_consulta,sintetica,exp5_prueba,5,becas_requisitos + pagos_consulta,prueba,40
+435,¿Qué debo hacer para solucionar que no llegue el código de verificación?,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,35
+436,¿Me pueden explicar cómo solucionar que no llegue el código de verificación?,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,36
+437,Tengo dudas sobre cómo solucionar que no llegue el código de verificación.,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,37
+438,¿A qué área debo consultar para solucionar que no llegue el código de verificación?,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,38
+439,No sé cuál es el procedimiento para solucionar que no llegue el código de verificación.,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,39
+440,¿En qué sección puedo solucionar que no llegue el código de verificación?,acceso_recuperacion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,40
+475,¿Qué debo hacer para hacer seguimiento a una solicitud enviada?,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,35
+476,¿Me pueden explicar cómo hacer seguimiento a una solicitud enviada?,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,36
+477,Tengo dudas sobre cómo hacer seguimiento a una solicitud enviada.,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,37
+478,¿A qué área debo consultar para hacer seguimiento a una solicitud enviada?,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,38
+479,No sé cuál es el procedimiento para hacer seguimiento a una solicitud enviada.,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,39
+480,¿En qué sección puedo hacer seguimiento a una solicitud enviada?,contacto_atencion,sintetica,exp6_prueba,6,acceso_recuperacion + contacto_atencion,prueba,40
+515,¿Qué debo hacer para resolver un cruce de horarios?,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,35
+516,¿Me pueden explicar cómo resolver un cruce de horarios?,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,36
+517,Tengo dudas sobre cómo resolver un cruce de horarios.,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,37
+518,¿A qué área debo consultar para resolver un cruce de horarios?,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,38
+519,No sé cuál es el procedimiento para resolver un cruce de horarios.,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,39
+520,¿En qué sección puedo resolver un cruce de horarios?,horarios_consulta,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,40
+555,¿Qué debo hacer para consultar cuándo entregarán mi carnet?,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,35
+556,¿Me pueden explicar cómo consultar cuándo entregarán mi carnet?,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,36
+557,Tengo dudas sobre cómo consultar cuándo entregarán mi carnet.,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,37
+558,¿A qué área debo consultar para consultar cuándo entregarán mi carnet?,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,38
+559,No sé cuál es el procedimiento para consultar cuándo entregarán mi carnet.,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,39
+560,¿En qué sección puedo consultar cuándo entregarán mi carnet?,carne_solicitud,sintetica,exp7_prueba,7,horarios_consulta + carne_solicitud,prueba,40
+595,¿La convalidación de cursos tiene algún costo?,convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+596,"Vengo de otra universidad, ¿qué cursos me pueden reconocer?",convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+597,¿Se pueden convalidar cursos de una carrera técnica?,convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+598,¿Dónde veo la tabla de equivalencias de los cursos?,convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+599,Quiero saber qué documentos necesito para convalidar asignaturas.,convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+600,¿Qué requisitos piden para reconocer créditos de otra universidad?,convalidacion_cursos,sintetica_revisada,amp_convalidacion_cursos,ampliacion_20_intenciones,,prueba,15
+635,¿La nota del sustitutorio puede bajar mi promedio?,examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+636,"Mi pago del sustitutorio no figura, ¿cómo lo soluciono?",examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+637,¿Qué requisitos debo cumplir para dar el examen sustitutorio?,examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+638,¿Dónde aparece la nota del examen sustitutorio?,examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+639,¿En qué parte de MiMundoUPN solicito el examen sustitutorio?,examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+640,¿Cuándo publican el cronograma de exámenes sustitutorios?,examen_sustitutorio,sintetica_revisada,amp_examen_sustitutorio,ampliacion_20_intenciones,,prueba,16
+675,Necesito actualizar los datos vinculados a mi correo UPN.,correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+676,¿Qué aplicaciones puedo usar con mi cuenta de correo UPN?,correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+677,¿Cómo agrego mi correo UPN a la aplicación de Outlook?,correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+678,¿Dónde reviso las comunicaciones enviadas por UPN?,correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+679,¿El correo correcto termina en @upn.pe?,correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+680,"Mi cuenta de correo fue suspendida, ¿a quién contacto?",correo_institucional,sintetica_revisada,amp_correo_institucional,ampliacion_20_intenciones,,prueba,17
+715,¿Cuándo termina el ciclo para mi modalidad de estudios?,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+716,Quiero saber cuándo finaliza el periodo académico.,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+717,¿Dónde está el calendario para Adulto Trabajador?,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+718,¿El calendario académico es igual para todos los campus?,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+719,¿Dónde aparecen los feriados y días sin clases?,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+720,¿Cuál es la fecha de inicio del próximo ciclo?,calendario_academico,sintetica_revisada,amp_calendario_academico,ampliacion_20_intenciones,,prueba,18
+755,¿Qué modalidades están autorizadas para mi programa?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+756,¿Qué documentos necesito para cambiar de modalidad?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+757,¿Qué modalidades de estudio ofrece UPN?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+758,¿El cambio de modalidad se aplica en el siguiente ciclo?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+759,¿Cómo afecta la modalidad a mi fecha de egreso?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+760,¿Puedo cambiar de Adulto Trabajador a Pregrado Tradicional?,modalidad_estudios,sintetica_revisada,amp_modalidad_estudios,ampliacion_20_intenciones,,prueba,19
+795,¿Dónde puedo buscar libros digitales para mis cursos?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20
+796,¿Dónde encuentro la bibliografía de mi curso?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20
+797,¿Puedo acceder a bases de datos académicas desde casa?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20
+798,¿La biblioteca presta libros a domicilio?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20
+799,¿Puedo usar la biblioteca si soy egresado?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20
+800,¿Qué usuario necesito para entrar a la Biblioteca Virtual?,biblioteca_servicio,sintetica_revisada,amp_biblioteca_servicio,ampliacion_20_intenciones,,prueba,20

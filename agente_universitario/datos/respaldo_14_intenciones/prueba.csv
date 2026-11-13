@@ -1,0 +1,15 @@
+﻿id,consulta,intencion,origen,grupo
+3,¿Puedo matricularme en cursos con cruce de horario?,matricula_requisitos,sintetica,mreq02
+6,¿Dónde encuentro el calendario de matrícula de mi periodo?,matricula_fechas,sintetica,mfec02
+9,¿En qué sección de MiMundoUPN aparece mi horario?,horarios_consulta,sintetica,hor02
+12,¿Dónde reviso el Reglamento de Becas?,becas_requisitos,sintetica,bec02
+15,¿Cómo entro a la sección de pagos de MiMundoUPN?,pagos_consulta,sintetica,pag02
+18,¿Dónde descargo la constancia de estudios que solicité?,constancia_solicitud,sintetica,const02
+21,No recibo el código de verificación para recuperar mi cuenta,acceso_recuperacion,sintetica,acc02
+24,¿Retirarme de un curso reduce mis cuotas de pensión?,retiro_curso,sintetica,rcu02
+27,¿Qué fotografía necesito para solicitar el carné universitario?,carne_solicitud,sintetica,car02
+30,¿Puedo solicitar un certificado que incluya varios periodos académicos?,certificado_estudios,sintetica,cer02
+33,¿Qué pasa con mis pensiones si solicito el retiro del ciclo?,retiro_ciclo,sintetica,rci02
+36,¿Qué debo revisar sobre mis cursos antes de cambiar de carrera?,traslado_carrera,sintetica,tca02
+39,¿Cambiar de campus puede afectar mis descuentos?,traslado_campus,sintetica,tcp02
+42,¿Dónde reviso el seguimiento de mi ticket de Contacto UPN?,contacto_atencion,sintetica,con02
