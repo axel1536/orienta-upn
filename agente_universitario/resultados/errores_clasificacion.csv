@@ -1,6 +1,0 @@
-﻿consulta,intencion_real,intencion_predicha,acierto
-¿Puedo matricularme en cursos con cruce de horario?,matricula_requisitos,matricula_fechas,False
-¿Dónde encuentro el calendario de matrícula de mi periodo?,matricula_fechas,horarios_consulta,False
-¿Dónde reviso el Reglamento de Becas?,becas_requisitos,pagos_consulta,False
-¿Cómo entro a la sección de pagos de MiMundoUPN?,pagos_consulta,acceso_recuperacion,False
-¿Qué debo revisar sobre mis cursos antes de cambiar de carrera?,traslado_carrera,matricula_requisitos,False
