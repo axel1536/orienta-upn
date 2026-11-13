@@ -41,14 +41,35 @@ else:
 
 st.write("Confirma, corrige o descarta cada ejemplo antes de usarlo para entrenar.")
 
-pendientes = list(reversed(listar_registros("pendiente")))
-confirmadas = listar_registros("confirmada")
+CLAVE_REGISTROS = "registros_revision_admin"
+if st.button("Actualizar consultas desde Google Sheets", width="stretch"):
+    st.session_state.pop(CLAVE_REGISTROS, None)
+
+try:
+    if CLAVE_REGISTROS not in st.session_state:
+        st.session_state[CLAVE_REGISTROS] = listar_registros()
+    registros = st.session_state[CLAVE_REGISTROS]
+except Exception:
+    st.error(
+        "Google Sheets no respondió después de varios intentos. "
+        "Espera unos segundos y pulsa Actualizar consultas."
+    )
+    st.stop()
+
+pendientes = list(reversed([
+    registro for registro in registros
+    if registro.get("estado") == "pendiente"
+]))
+confirmadas = [
+    registro for registro in registros
+    if registro.get("estado") == "confirmada"
+]
 st.metric("Pendientes", len(pendientes))
 
 if confirmadas:
     st.download_button(
         "Descargar consultas confirmadas",
-        data=confirmadas_csv().encode("utf-8-sig"),
+        data=confirmadas_csv(confirmadas).encode("utf-8-sig"),
         file_name="consultas_confirmadas.csv",
         mime="text/csv",
         width="stretch",
@@ -85,10 +106,30 @@ for registro in pendientes:
         if col_confirmar.button(
             "Confirmar", key="confirmar_" + registro["id"], width="stretch"
         ):
-            revisar_registro(registro["id"], "confirmada", correcta)
-            st.rerun()
+            try:
+                _, actualizados = revisar_registro(
+                    registro["id"], "confirmada", correcta,
+                    devolver_registros=True,
+                )
+                st.session_state[CLAVE_REGISTROS] = actualizados
+                st.rerun()
+            except Exception:
+                st.error(
+                    "No se pudo guardar en Google Sheets. Espera unos "
+                    "segundos e inténtalo otra vez."
+                )
         if col_descartar.button(
             "Descartar", key="descartar_" + registro["id"], width="stretch"
         ):
-            revisar_registro(registro["id"], "descartada")
-            st.rerun()
+            try:
+                _, actualizados = revisar_registro(
+                    registro["id"], "descartada",
+                    devolver_registros=True,
+                )
+                st.session_state[CLAVE_REGISTROS] = actualizados
+                st.rerun()
+            except Exception:
+                st.error(
+                    "No se pudo guardar en Google Sheets. Espera unos "
+                    "segundos e inténtalo otra vez."
+                )
