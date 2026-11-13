@@ -15,7 +15,7 @@
   },
   {
     "intencion": "horarios_consulta",
-    "respuesta": "Ingresa a MiMundoUPN con tu cuenta institucional. En la pantalla principal, abre la opción Cursos para consultar tu horario de clases. El agente te orienta hacia esa sección, pero no tiene acceso a tu horario personal.",
+    "respuesta": "Ingresa a MiMundoUPN con tu cuenta institucional y abre Mis estudios → Horarios para consultar tus cursos, secciones, días y horas. El agente te orienta hacia esa sección, pero no tiene acceso a tu horario personal.",
     "fuente": "https://contacto.upn.edu.pe/como-puedo-revisar-los-horarios-de-mis-cursos",
     "area_responsable": "Contacto UPN - consultas académicas",
     "fecha_revision": "2026-10-23"
